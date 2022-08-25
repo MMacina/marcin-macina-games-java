@@ -1,4 +1,5 @@
 package com.games.ox;
 
-public class Logic {
+public class Logic
+{
 }
