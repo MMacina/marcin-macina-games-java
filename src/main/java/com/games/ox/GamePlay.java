@@ -1,6 +1,7 @@
 package com.games.ox;
 
 import java.sql.SQLOutput;
+import java.util.Random;
 import java.util.Scanner;
 
 public class GamePlay {
@@ -41,6 +42,7 @@ public class GamePlay {
                 System.out.println("Player " + currentPlayer + " wins this game. Congratulation !!!");
                 break;
             } else {
+
                 currentPlayer = currentPlayer == 'X' ? 'O' : 'X';
             }
         }
