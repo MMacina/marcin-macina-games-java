@@ -11,7 +11,7 @@ import java.lang.*;
 class OxApplicationTestsSuite {
     @Nested
     @DisplayName("Tests for winning by O user.")
-    class OWins{
+    class OWins {
 
         @Test
         @DisplayName("O wins to three in rows.")
@@ -28,6 +28,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("O wins to five in rows.")
         void OWinsToFiveInRows() {
@@ -46,6 +47,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("O doesn't wins to five in rows.")
         void ODoesntWinsToFiveInRows() {
@@ -64,6 +66,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertFalse(check);
         }
+
         @Test
         @DisplayName("O wins to three in column.")
         void OWinsToThreeInColumns() {
@@ -79,6 +82,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("O wins to five in column.")
         void OWinsToFiveInColumns() {
@@ -96,6 +100,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("O doesn't wins to five in column.")
         void ODoesntWinsToFiveInColumns() {
@@ -113,6 +118,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertFalse(check);
         }
+
         @Test
         @DisplayName("O wins to three in diagonal Up->Down.")
         void OWinsToThreeInDiagonalUpToDown() {
@@ -123,11 +129,12 @@ class OxApplicationTestsSuite {
             board[2][2] = 'O';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalUpToDown(board, 'O');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'O');
 
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("O wins to five in diagonal Up->Down.")
         void OWinsToFiveInDiagonalUpToDown() {
@@ -140,11 +147,12 @@ class OxApplicationTestsSuite {
             board[8][5] = 'O';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalUpToDown(board, 'O');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'O');
 
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("O doesn't wins to five in diagonal Up->Down.")
         void ODoesntWinsToFiveInDiagonalUpToDown() {
@@ -157,11 +165,12 @@ class OxApplicationTestsSuite {
             board[8][5] = 'O';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalUpToDown(board, 'O');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'O');
 
             //Then
             Assertions.assertFalse(check);
         }
+
         @Test
         @DisplayName("O wins to three in diagonal Down->Up.")
         void OWinsToThreeInDiagonalDownToUp() {
@@ -172,11 +181,12 @@ class OxApplicationTestsSuite {
             board[0][2] = 'O';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalDownToUp(board, 'O');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'O');
 
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("O wins to five in diagonal Down->Up.")
         void OWinsToFiveInDiagonalDownToUp() {
@@ -189,11 +199,12 @@ class OxApplicationTestsSuite {
             board[5][9] = 'O';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalDownToUp(board, 'O');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'O');
 
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("O doesn't wins to five in diagonal Down->Up.")
         void ODoesntWinsToFiveInDiagonalDownToUp() {
@@ -206,7 +217,7 @@ class OxApplicationTestsSuite {
             board[5][9] = 'X';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalDownToUp(board, 'O');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'O');
 
             //Then
             Assertions.assertFalse(check);
@@ -215,7 +226,7 @@ class OxApplicationTestsSuite {
 
     @Nested
     @DisplayName("Tests for winning by X user.")
-    class XWins{
+    class XWins {
 
         @Test
         @DisplayName("X wins to three in rows.")
@@ -232,6 +243,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("X wins to five in rows.")
         void XWinsToFiveInRows() {
@@ -250,6 +262,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("X doesn't wins to five in rows.")
         void XDoesntWinsToFiveInRows() {
@@ -268,6 +281,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertFalse(check);
         }
+
         @Test
         @DisplayName("X wins to three in column.")
         void XWinsToThreeInColumns() {
@@ -283,6 +297,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("X wins to five in column.")
         void XWinsToFiveInColumns() {
@@ -300,6 +315,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("X doesn't wins to five in column.")
         void XDoesntWinsToFiveInColumns() {
@@ -317,6 +333,7 @@ class OxApplicationTestsSuite {
             //Then
             Assertions.assertFalse(check);
         }
+
         @Test
         @DisplayName("X wins to three in diagonal Up->Down.")
         void XWinsToThreeInDiagonalUpToDown() {
@@ -327,11 +344,12 @@ class OxApplicationTestsSuite {
             board[2][2] = 'X';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalUpToDown(board, 'X');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'X');
 
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("X wins to five in diagonal Up->Down.")
         void XWinsToFiveInDiagonalUpToDown() {
@@ -344,11 +362,12 @@ class OxApplicationTestsSuite {
             board[8][5] = 'X';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalUpToDown(board, 'X');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'X');
 
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("X doesn't wins to five in diagonal Up->Down.")
         void XDoesntWinsToFiveInDiagonalUpToDown() {
@@ -361,11 +380,12 @@ class OxApplicationTestsSuite {
             board[8][5] = 'X';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalUpToDown(board, 'X');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'X');
 
             //Then
             Assertions.assertFalse(check);
         }
+
         @Test
         @DisplayName("X wins to three in diagonal Down->Up.")
         void XWinsToThreeInDiagonalDownToUp() {
@@ -376,11 +396,12 @@ class OxApplicationTestsSuite {
             board[0][2] = 'X';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalDownToUp(board, 'X');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'X');
 
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("X wins to five in diagonal Down->Up.")
         void XWinsToFiveInDiagonalDownToUp() {
@@ -393,11 +414,12 @@ class OxApplicationTestsSuite {
             board[5][9] = 'X';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalDownToUp(board, 'X');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'X');
 
             //Then
             Assertions.assertTrue(check);
         }
+
         @Test
         @DisplayName("X doesn't wins to five in diagonal Down->Up.")
         void XDoesntWinsToFiveInDiagonalDownToUp() {
@@ -410,48 +432,10 @@ class OxApplicationTestsSuite {
             board[5][9] = 'X';
 
             //When
-            boolean check = WinVerifier.winCheckDiagonalDownToUp(board, 'X');
+            boolean check = WinVerifier.winCheckDiagonal(board, 'X');
 
             //Then
             Assertions.assertFalse(check);
         }
-    }
-    @Nested
-    @DisplayName("Tests for draw and wrong input.")
-    class OtherTests {
-
-        /*@Test
-        @DisplayName("Test for draw")
-        void DrawTest() {
-            //Given
-            char[][] board = new char[3][3];
-            board[0][0] = 'O';
-            board[0][1] = 'X';
-            board[0][2] = 'O';
-            board[1][0] = 'X';
-            board[1][1] = 'X';
-            board[1][2] = 'O';
-            board[2][0] = 'X';
-            board[2][1] = 'O';
-            board[2][2] = 'X';
-
-            //When//Then
-            GamePlay.playGame(board);
-        }*/
-
-        /*@Test
-        @DisplayName("Test for input verification")
-        void inputVerifierTest() {
-            //Given
-            int coordinate = 12;
-
-            //When
-            int verifiedCoordinate = InputVerifier.numberConverter(coordinate);
-
-            //Then
-            Assertions.assertThrows(NumberFormatException);
-
-
-        }*/
     }
 }

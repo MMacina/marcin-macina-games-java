@@ -1,7 +1,5 @@
 package com.games.ox;
 
-import java.util.Scanner;
-
 public class OxRun {
     public static void main(String[] args) {
 
@@ -14,6 +12,5 @@ public class OxRun {
 
         GamePlay.playGame(gameBoard);
         System.out.println();
-
     }
 }

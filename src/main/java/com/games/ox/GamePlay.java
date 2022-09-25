@@ -1,13 +1,6 @@
 package com.games.ox;
 
-import java.sql.SQLOutput;
-import java.util.Random;
-import java.util.Scanner;
-
 public class GamePlay {
-    // TODO
-    //  define loop condition (game condition)
-    //  set computer as one of players
 
     public static void playGame(char[][] gameBoard) {
 
@@ -34,7 +27,7 @@ public class GamePlay {
             roundCounter++;
             if (roundCounter == (gameBoard.length * gameBoard.length)) {
                 System.out.println("This round ended in a draw.");
-                break;
+                throw new DrawException();
             }
 
             boolean winCheck = WinVerifier.winCheck(gameBoard, currentPlayer);
